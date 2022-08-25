@@ -127,6 +127,7 @@ a {
     height: 3px;
     background-color: #173a56;
     border-radius: 2px;
+    transition: 0.5s ease all;
     content: "";
   }
   .header__burger-inner {
@@ -140,6 +141,21 @@ a {
   }
   .header__tool {
     margin: 0;
+  }
+  .header--opened .header__burger-inner {
+    display: none;
+  }
+  .header--opened .header__burger::before,
+.header--opened .header__burger::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .header--opened .header__burger::after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  .header--opened .header__burger::before {
+    transform: translateY(-50%) rotate(45deg);
   }
 }
 .nav__list {
