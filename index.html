@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Product</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <a class="header__logo" href=""
+          ><img src="./assets/icons/logo.svg" alt="Logo" />
+          <img src="./assets/icons/logo-text.svg" alt="Logo-text" />
+        </a>
+        <button type="menu" class="header__burger">
+          <span class="header__burger-inner"></span>
+          <span class="visually-hidden">Menu toggler button</span>
+        </button>
+        <div class="header__wrapper">
+          <nav class="nav header__nav">
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a href="#" class="nav__link nav__link--bold">Product</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="#" class="nav__link">Customer</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="#" class="nav__link">Pricing</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="#" class="nav__link">Resources</a>
+              </li>
+            </ul>
+          </nav>
+          <button type="button" class="header__sign-in-button">Sign in</button>
+          <button type="button" class="green-button header__green-button">
+            Sign up
+          </button>
+          <button type="button" class="header__tool">
+            <span class="header__tool-inner"> </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const elToggler = document.querySelector(".header__burger");
+      const elHeader = document.querySelector(".header");
+
+      elToggler.addEventListener("click", function () {
+        elHeader.classList.toggle("header--opened");
+      });
+    </script>
+  </body>
+</html>
