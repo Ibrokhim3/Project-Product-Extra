@@ -1,0 +1,89 @@
+.hero {
+  margin-bottom: 115px;
+}
+.container {
+}
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 33px;
+}
+.visually-hidden {
+}
+.hero__text-side {
+}
+.hero__title {
+  margin: 0;
+  width: 392px; //dizayndda 518px
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  color: $text-color;
+  margin-bottom: 18px;
+}
+.hero__desc {
+  margin: 0;
+  width: 458px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: $text-color;
+  margin-bottom: 45px;
+  display: inline-flex;
+}
+.hero__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.hero__green-button {
+  font-weight: 700;
+  font-size: 16px;
+  padding: 15px 41px;
+  margin-right: 71px;
+  display: inline-block;
+}
+.hero__video-link {
+  text-decoration: underline;
+  color: $accent-color;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url(../../assets/icons/Triangle\ Copy\ 6.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 20px;
+
+    //Korib chiqish kerak
+  }
+}
+.hero__img-side {
+}
+
+@media only screen and (max-width: $mobile) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero__title {
+    width: 369px;
+  }
+
+  .hero__desc {
+    width: 327px;
+    margin-bottom: 16px;
+    display: inline-flex;
+  }
+
+  .hero__green-button {
+    padding: 15px 25px;
+  }
+}

@@ -5,7 +5,6 @@
 
 .header-container {
   display: flex;
-
   align-items: center;
   justify-content: space-between;
 }
@@ -56,6 +55,20 @@
   height: 20px;
   border: 3px solid $accent-color;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.5px;
+}
+
+.header__tool-round {
+  width: 7px;
+  height: 14px;
+  background-color: $accent-color;
+  position: absolute;
+  border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+
+  //Korib chiqish kerak !
 }
 
 .header__burger {
@@ -69,6 +82,7 @@
   .header {
     padding: 17px 0;
     box-shadow: 5px 0 15px $gray;
+    margin-bottom: 30px;
   }
 
   .header--opened .header__wrapper {
@@ -83,6 +97,7 @@
     background-color: $white;
     top: 75px;
     right: 15px;
+    width: 50%;
   }
 
   .header__burger {
@@ -101,6 +116,8 @@
     border-radius: 2px;
     transition: 0.5s ease all;
     content: "";
+
+    //chiziqlari bir-xil chiqmadi
   }
 
   .header__burger-inner {

@@ -11,16 +11,27 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
     <title>Product</title>
   </head>
   <body>
     <header class="header">
       <div class="container header-container">
         <a class="header__logo" href=""
-          ><img src="./assets/icons/logo.svg" alt="Logo" />
-          <img src="./assets/icons/logo-text.svg" alt="Logo-text" />
+          ><img
+            src="./assets/icons/logo.svg"
+            alt="Logo"
+            width="40"
+            height="37"
+          />
+          <img
+            src="./assets/icons/logo-text.svg"
+            alt="Logo-text"
+            width="122"
+            height="28"
+          />
         </a>
-        <button type="menu" class="header__burger">
+        <button type="button" class="header__burger">
           <span class="header__burger-inner"></span>
           <span class="visually-hidden">Menu toggler button</span>
         </button>
@@ -46,19 +57,80 @@
             Sign up
           </button>
           <button type="button" class="header__tool">
-            <span class="header__tool-inner"> </span>
+            <span class="header__tool-inner">
+              <span class="header__tool-round"></span>
+            </span>
           </button>
         </div>
       </div>
     </header>
-
-    <script>
-      const elToggler = document.querySelector(".header__burger");
-      const elHeader = document.querySelector(".header");
-
-      elToggler.addEventListener("click", function () {
-        elHeader.classList.toggle("header--opened");
-      });
-    </script>
+    <main>
+      <section class="hero">
+        <div class="container hero-container">
+          <h1 class="visually-hidden">Product</h1>
+          <div class="hero__text-side">
+            <p class="hero__title">Work at the speed of thought</p>
+            <p class="hero__desc">
+              Tools, tutorials, design and innovation experts, all in one place!
+              The most intuitive way to imagine your next user experience.
+            </p>
+            <div class="hero__buttons">
+              <a
+                class="green-button hero__green-button"
+                href="#"
+                targer="_blank"
+                >Get started</a
+              >
+              <a class="hero__video-link" href="#" targer="_blank"
+                >Watch the Video</a
+              >
+            </div>
+          </div>
+          <div class="hero__img-side">
+            <picture>
+              <source
+                media="(max-width: 668px)"
+                type="image/webp"
+                srcset="
+                  ./assets/images/main-img-mobile@2x.webp 2x,
+                  ./assets/images/main-img-mobile.webp    1x
+                "
+                width="338"
+                height="311"
+              />
+              <source
+                media="(max-width: 668px)"
+                srcset="
+                  ./assets/images/main-img-mobile@2x.jpg 2x,
+                  ./assets/images/main-img-mobile.jpg    1x
+                "
+                width="338"
+                height="311"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./assets/images/main-img@2x.webp 2x,
+                  ./assets/images/main-img.webp    1x
+                "
+                width="600"
+                height="556"
+              />
+              <img
+                src="./assets/images/main-img.jpg"
+                alt="People with mobile"
+                srcset="
+                  ./assets/images/main-img@2x.jpg 2x,
+                  ./assets/images/main-img.jpg    1x
+                "
+                width="600"
+                height="556"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./app.js"></script>
   </body>
 </html>
